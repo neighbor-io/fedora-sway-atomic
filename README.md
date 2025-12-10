@@ -28,7 +28,7 @@ rpm-ostree install -y \
         gstreamer1-vaapi \
         --allow-inactive
 
-rpm-ostree override remove -y \
+rpm-ostree override remove \
              fdk-aac-free \
              libavcodec-free \
              libavdevice-free \
@@ -62,7 +62,7 @@ qemu-kvm \
 virt-manager \
 virt-viewer
 
-# Start and enable services
+# Start and enable services after reboot
 sudo systemctl start libvirtd
 sudo systemctl enable libvirtd
 ```
